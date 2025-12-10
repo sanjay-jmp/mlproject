@@ -1,0 +1,1 @@
+# file that makes find_packages consider the folder in which it resides as a package and tries to build it
