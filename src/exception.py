@@ -1,5 +1,5 @@
 import sys
-from logger import logging
+from src.logger import logging
 def error_message_detail(error, error_detail:sys):
     _,_, exc_tb = error_detail.exc_info() # exc_tb info holds the details such as in which fille the error the file was raised, which line number, etc
 
