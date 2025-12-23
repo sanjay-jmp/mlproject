@@ -49,8 +49,11 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
     
 def load_object(file_path):
     try:
-        with open(file_path, "rb") as file_obj:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        abs_path = os.path.join(base_dir, file_path)
+
+        with open(abs_path, "rb") as file_obj:
             return dill.load(file_obj)
-        
+
     except Exception as e:
         raise CustomException(e, sys)
